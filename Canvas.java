@@ -152,6 +152,9 @@ public class Canvas
         else if(colorString.equals("neon")) {
             graphic.setColor(new Color(4, 217, 255));
         }
+        else if(colorString.equals("gold")) {
+            graphic.setColor(new Color(242, 202, 70));
+        }
         else {
             graphic.setColor(Color.black);
         }
