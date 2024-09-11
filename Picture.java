@@ -55,15 +55,80 @@ public class Picture
     {
         if(!drawn) {
 
+            background1.changeColor("orange");
+            background2.changeColor("neon");
+            background3.changeColor("gold");
+            background4.changeColor("purple");
             
-            background1.changeColor("black");
-            background1.moveHorizontal(-102);
-            background1.moveVertical(40);
-            background1.changeSize(40);
+            circle1.changeColor("gold");
+            circle2.changeColor("purple");
+            circle3.changeColor("orange");
+            circle4.changeColor("neon");
+            
+            fractal1.changeColor("gold");
+            fractal2.changeColor("purple");
+            fractal3.changeColor("orange");
+            fractal4.changeColor("neon");
+            
+            background1.moveHorizontal(0);
+            background1.moveVertical(-120);
+            background1.changeSize(120);
             background1.makeVisible();
 
-    
+            background2.moveHorizontal(-100);
+            background2.moveVertical(-100);
+            background2.changeSize(120);
+            background2.makeVisible();
+            
+            background3.moveHorizontal(-200);
+            background3.moveVertical(-80);
+            background3.changeSize(120);
+            background3.makeVisible();
 
+            background4.moveHorizontal(-300);
+            background4.moveVertical(-60);
+            background4.changeSize(120);
+            background4.makeVisible();
+            
+            circle1.moveHorizontal(-180);
+            circle1.moveVertical(-20);
+            circle1.changeSize(40);
+            circle1.makeVisible();
+            
+            circle2.moveHorizontal(-80);
+            circle2.moveVertical(-20);
+            circle2.changeSize(40);
+            circle2.makeVisible();
+            
+            circle3.moveHorizontal(20);
+            circle3.moveVertical(-20);
+            circle3.changeSize(40);
+            circle3.makeVisible();
+
+            circle4.moveHorizontal(120);
+            circle4.moveVertical(-20);
+            circle4.changeSize(40);
+            circle4.makeVisible();
+
+            fractal1.changeSize(20,20);
+            fractal1.moveHorizontal(20);
+            fractal1.moveVertical(0);
+            fractal1.makeVisible();
+            
+            fractal2.changeSize(20,20);
+            fractal2.moveHorizontal(-80);
+            fractal2.moveVertical(20);
+            fractal2.makeVisible();
+
+            fractal3.changeSize(20,20);
+            fractal3.moveHorizontal(220);
+            fractal3.moveVertical(-40);
+            fractal3.makeVisible();
+            
+            fractal4.changeSize(20,20);
+            fractal4.moveHorizontal(120);
+            fractal4.moveVertical(-20);
+            fractal4.makeVisible();
             drawn = true;
         }
     }
@@ -82,6 +147,11 @@ public class Picture
      */
     public void setColor()
     {
+        
+        background1.changeColor("orange");
+        background2.changeColor("neon");
+        background3.changeColor("gold");
+        background4.changeColor("purple");
 
     }
 }
