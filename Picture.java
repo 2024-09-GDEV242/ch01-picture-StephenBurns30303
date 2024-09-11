@@ -136,9 +136,24 @@ public class Picture
             fractal4.makeVisible();
             
             person1.moveHorizontal(-165);
-            person1.moveVertical(-55);
+            person1.moveVertical(-30);
             person1.changeSize(20,20);
             person1.makeVisible();
+            
+            person2.moveHorizontal(-65);
+            person2.moveVertical(-50);
+            person2.changeSize(20,20);
+            person2.makeVisible();
+            
+            person3.moveHorizontal(35);
+            person3.moveVertical(-70);
+            person3.changeSize(20,20);
+            person3.makeVisible();
+            
+            person4.moveHorizontal(135);
+            person4.moveVertical(-90);
+            person4.changeSize(20,20);
+            person4.makeVisible();
             
             drawn = true;
         }
@@ -149,7 +164,26 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-   
+        
+        background1.changeColor("black");
+        background2.changeColor("black");
+        background3.changeColor("black");
+        background4.changeColor("black");
+        
+        circle1.changeColor("white");
+        circle2.changeColor("white");
+        circle3.changeColor("white");
+        circle4.changeColor("white");
+        
+        fractal1.changeColor("black");
+        fractal2.changeColor("black");
+        fractal3.changeColor("black");
+        fractal4.changeColor("black");
+        
+        person1.changeColor("white");
+        person2.changeColor("white");
+        person3.changeColor("white");
+        person4.changeColor("white");
 
     }
 
@@ -163,6 +197,21 @@ public class Picture
         background2.changeColor("neon");
         background3.changeColor("gold");
         background4.changeColor("purple");
+            
+        circle1.changeColor("gold");
+        circle2.changeColor("purple");
+        circle3.changeColor("orange");
+        circle4.changeColor("neon");
+            
+        fractal1.changeColor("gold");
+        fractal2.changeColor("purple");
+        fractal3.changeColor("orange");
+        fractal4.changeColor("neon");
+            
+        person1.changeColor("gold");
+        person2.changeColor("purple");
+        person3.changeColor("orange");
+        person4.changeColor("neon");
 
     }
 }
