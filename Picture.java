@@ -4,7 +4,11 @@
  * can be changed. You can set it to black-and-white display and back to
  * colors (only after it's been drawn, of course).
  *
- * This class was written as an early example for teaching Java with BlueJ.
+ * I was kind of going for different dimensions overlapping each other like 
+ * four dioramas. I went with 80's esque color scheme because alot of retro-art
+ * being made with it has this otherworldly feel. I was able to squeeze an
+ * animation into but if I had more time I would have had the ball change color
+ * as it passes through each dimension.
  * 
  * @author  Stephen M. Burns
  * @version 2024.09.3
@@ -16,7 +20,7 @@ public class Picture
     
     private Square background1, background2, background3, background4;
     private Triangle fractal1, fractal2, fractal3, fractal4;
-    private Circle circle1, circle2, circle3, circle4;
+    private Circle circle1, circle2, circle3, circle4, animationTest;
     private Person person1, person2, person3, person4;
 
     /**
@@ -33,6 +37,7 @@ public class Picture
         circle2 = new Circle();
         circle3 = new Circle();
         circle4 = new Circle();
+        animationTest = new Circle();
         
         fractal1 = new Triangle();
         fractal2 = new Triangle();
@@ -54,7 +59,9 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-
+            
+            animationTest.changeColor("orange");
+            
             background1.changeColor("orange");
             background2.changeColor("neon");
             background3.changeColor("gold");
@@ -155,6 +162,27 @@ public class Picture
             person4.changeSize(20,20);
             person4.makeVisible();
             
+            animationTest.moveHorizontal(40);
+            animationTest.moveVertical(160);
+            animationTest.changeSize(40);
+            animationTest.makeVisible();
+            
+            int countLoop=1;
+            
+            while(countLoop>=0)
+            {
+                animationTest.slowMoveHorizontal(80);
+                animationTest.changeColor("purple");
+                animationTest.slowMoveHorizontal(-180);
+                animationTest.changeColor("gold");
+                animationTest.slowMoveHorizontal(80);
+                animationTest.changeColor("neon");
+                animationTest.slowMoveHorizontal(-180);
+                animationTest.changeColor("orange");
+                animationTest.slowMoveHorizontal(80);
+                --countLoop;
+            }
+
             drawn = true;
         }
     }
@@ -165,24 +193,26 @@ public class Picture
     public void setBlackAndWhite()
     {
         
-        background1.changeColor("black");
-        background2.changeColor("black");
-        background3.changeColor("black");
-        background4.changeColor("black");
+        animationTest.changeColor("black");
         
-        circle1.changeColor("white");
+        background1.changeColor("black");
+        background2.changeColor("white");
+        background3.changeColor("black");
+        background4.changeColor("white");
+        
+        circle1.changeColor("black");
         circle2.changeColor("white");
-        circle3.changeColor("white");
+        circle3.changeColor("black");
         circle4.changeColor("white");
         
         fractal1.changeColor("black");
-        fractal2.changeColor("black");
+        fractal2.changeColor("white");
         fractal3.changeColor("black");
-        fractal4.changeColor("black");
+        fractal4.changeColor("white");
         
-        person1.changeColor("white");
+        person1.changeColor("black");
         person2.changeColor("white");
-        person3.changeColor("white");
+        person3.changeColor("black");
         person4.changeColor("white");
 
     }
@@ -192,6 +222,8 @@ public class Picture
      */
     public void setColor()
     {
+        
+        animationTest.changeColor("purple");
         
         background1.changeColor("orange");
         background2.changeColor("neon");
