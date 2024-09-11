@@ -70,6 +70,11 @@ public class Picture
             fractal3.changeColor("orange");
             fractal4.changeColor("neon");
             
+            person1.changeColor("gold");
+            person2.changeColor("purple");
+            person3.changeColor("orange");
+            person4.changeColor("neon");
+            
             background1.moveHorizontal(0);
             background1.moveVertical(-120);
             background1.changeSize(120);
@@ -129,6 +134,12 @@ public class Picture
             fractal4.moveHorizontal(120);
             fractal4.moveVertical(-20);
             fractal4.makeVisible();
+            
+            person1.moveHorizontal(-165);
+            person1.moveVertical(-55);
+            person1.changeSize(20,20);
+            person1.makeVisible();
+            
             drawn = true;
         }
     }
